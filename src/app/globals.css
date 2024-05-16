@@ -18,16 +18,34 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.carousel > button:first-of-type {
+  left: auto;
+  background: white;
+  opacity: 1;
+  color: gray;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  min-height: 90px;
+}
+
+.carousel > button:last-of-type {
+  right: 0;
+  background: white;
+  opacity: 1;
+  color: black;
+  border-radius: 5px 0 0 5px;
+  min-height: 90px;
 }
